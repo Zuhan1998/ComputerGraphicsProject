@@ -1188,28 +1188,28 @@ void update(int value)
 {
 
 
-      glutPostRedisplay();          // Update the GLUT
-      glutTimerFunc(25, update, 0); // Re-call it
+      glutPostRedisplay();         
+      glutTimerFunc(25, update, 0); 
 }
 
 void initRendering(void)
 {
-      glClearColor(0.0, 0.0, 0.0, 0.0); // set the bg color to a bright black
-      glLoadIdentity();                 // to be explained
+      glClearColor(0.0, 0.0, 0.0, 0.0); 
+      glLoadIdentity();                
       gluOrtho2D(0.0, 1050.0, 0.0, 1000.0);
 }
 
 int main(int argc, char** argv)
 {
-      glutInit(&argc, argv);                               // initialize the toolkit
-      glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH); // set the display mode
-      glutInitWindowSize(640, 480);                             // set window size
-      glutInitWindowPosition(150, 150);                         // set window upper left corner position on screen
-      glutCreateWindow("River Side Scenario");                  // open the screen window
+      glutInit(&argc, argv);                               
+      glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH); 
+      glutInitWindowSize(640, 480);                             
+      glutInitWindowPosition(150, 150);                       
+      glutCreateWindow("River Side Scenario");                
       glutTimerFunc(25, update, 0);
       glutDisplayFunc(myDisplay);
-      initRendering(); // additional initializations as necessary
-      glutMainLoop();  // go into a endless loop
+      initRendering(); 
+      glutMainLoop();
 
       return 0;
 }
