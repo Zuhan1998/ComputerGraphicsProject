@@ -1195,7 +1195,6 @@ void update(int value)
 void initRendering(void)
 {
       glClearColor(0.0, 0.0, 0.0, 0.0); // set the bg color to a bright black
-      glMatrixMode(GL_MODELVIEW);      // set up appropriate matrices-
       glLoadIdentity();                 // to be explained
       gluOrtho2D(0.0, 1050.0, 0.0, 1000.0);
 }
