@@ -1199,9 +1199,9 @@ void initRendering(void)
       gluOrtho2D(0.0, 1050.0, 0.0, 1000.0);
 }
 
-int main(int iArgc, char **cppArgv)
+int main(int argc, char** argv)
 {
-      glutInit(&iArgc, cppArgv);                                // initialize the toolkit
+      glutInit(&argc, argv);                               // initialize the toolkit
       glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH); // set the display mode
       glutInitWindowSize(640, 480);                             // set window size
       glutInitWindowPosition(150, 150);                         // set window upper left corner position on screen
